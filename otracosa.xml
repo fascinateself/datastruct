@@ -1,0 +1,36 @@
+<bad_tool_call>
+<function=web_code_canvas:generate_web_app>
+<parameter=language>HTML</parameter>
+<parameter=query>Create a complete, highly polished, interactive "God Game Civilization Simulator" web application in Spanish, designed for a University Data Structures project (Entrega Parcial 1 & Proyección Final). 
+
+Key Features Required:
+1. Interactive Map Grid (50x50 cells rendered smoothly on an HTML5 Canvas):
+   - Procedural terrain generation using a deterministic Seed input (biomes: Océano, Llanura, Bosque, Montaña, Desierto).
+   - 4 initial civilizations (Imperio Aethel, República Boreal, Dinastía Solaris, Confederación Valka) with distinct territory colors, capitals, villages, and cities.
+   - Hover/Click on any cell to inspect its complete attributes in a side panel: Bioma, Dueño, Asentamiento, Población, Natalidad/Mortalidad, Religiosidad, Felicidad, Hambre, Educación, Riqueza.
+   - Toggleable map overlays: Vista Política (Países), Vista de Biomas, Densidad de Población, y Religiosidad.
+
+2. Simulation Time System (Ticks):
+   - Controls to Advance 1 Tick, Play/Pause automatic ticks, and speed selector.
+   - Deterministic progression through the 5 Eras from the user's syllabus:
+     1. Era Primitiva (Fuego, Piedra, Domesticación, Mito)
+     2. Era Antigua (Escritura, Ciudad, Código de Leyes, Metalurgia)
+     3. Edad Clásica y Feudal (Rutas Comerciales, Cisma, Arquitectura, Herbolaria)
+     4. Era Industrial (Máquina de Vapor, Éxodo Rural, Método Científico, Guerra Total)
+     5. Era Tecnológica (Red Global, Genética, Energía Limpia)
+
+3. Divine Powers (Reglas de Dios):
+   - Interactive tool selector with a visual radius indicator (e.g., radio de 5 celdas) on the canvas:
+     - "Lluvia de Abundancia" (Blessing in radius: reduces hunger, boosts population and wealth).
+     - "Cataclismo Meteórico" (Disaster in radius: reduces population, alters terrain/happiness).
+     - "Enviar Iluminado" (Spawns a prophet in a target country to found/spread religion based on population stats).
+     - "Impulso Científico" (Triggers a tech roll in a region).
+
+4. Real-Time Data Structures Inspector (Crucial for the Professor's Grading Rubric):
+   - A dedicated visual panel showing the live state of the Data Structures powering the engine:
+     - `std::vector<Cell>` (Arreglo Dinámico): Shows memory layout index `x + y * width` of the selected cell and active countries vector.
+     - `std::queue<RoutineTask>` (Cola FIFO): Shows the queue of routine demographic/tech rolls processed during the current Tick.
+     - `std::priority_queue<PriorityEvent>` (Cola de Prioridad / Max-Heap): Shows simultaneous events ordered by weight (Divine Wrath: 100, Prophet: 85, Epidemic: 70, Colonization Claim: 50, Tech: 30).
+     - `std::stack<UIState>` & Árbol N-ario de Estados (Multiverse Undo System): Allows the player to Undo/jump back to previous Ticks and branch into a new timeline when making a different divine action, visually displaying the timeline nodes.</parameter>
+</function>
+</bad_tool_call>
